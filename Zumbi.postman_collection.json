@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "d23a045b-98c3-4774-8802-d88cccb3f5f9",
+		"name": "Zumbi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Percentage Infected",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reports/percentage_infected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"percentage_infected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Percentage Non Infected ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reports/percentage_non_infected",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"percentage_non_infected"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AVG resource with all survivors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reports/avg_resource_by_survivor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"avg_resource_by_survivor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Points Lost per Survivor Infected",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/reports/points_lost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"points_lost"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Survivor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Nunes\",\n  \"age\": 32,\n  \"gender\": \"Male\",\n  \"latitude\": -47.087616,\n  \"longitude\": -22.908928,\n  \"resources\": [\n\t {\n\t  \"resource_id\": 1,\n\t  \"amount\": 4\n\t },\n\t {\n\t  \"resource_id\": 2,\n\t  \"amount\": 2\n\t }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Resources",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Survivor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survivor By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/survivors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"survivors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report Infection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/survivors/5/report_infection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"survivors",
+						"5",
+						"report_infection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Survivor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"latitude\": -42.087616,\r\n  \"longitude\": -29.908928\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/survivors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"survivors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"trade\": {\r\n    \"survivor_1\": {\r\n      \"id\": 16,\r\n      \"resources\": [\r\n        {\r\n    \t  \"resource_id\": 1,\r\n          \"name\": \"Ammunition\",\r\n          \"amount\": 4\r\n        },\r\n        {\r\n          \"resource_id\": 2,\r\n          \"name\": \"Medication\",\r\n          \"amount\": 2\r\n        }\r\n      ]\r\n    },\r\n    \"survivor_2\": {\r\n      \"id\": 17,\r\n      \"resources\": [\r\n        {\r\n    \t  \"resource_id\": 4,\r\n          \"name\": \"Water\",\r\n          \"amount\": 2\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/trades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"trades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=zssn
+      - POSTGRES_USER=zssn_user
+      - POSTGRES_DB=zssn
+    networks:
+      zssn_network:
+        aliases:
+          - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    networks:
+      zssn_network:
+        aliases:
+          - pgadmin
+    ports:
+      - "15432:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=zssn
+      - PGADMIN_DEFAULT_PASSWORD=zssn
+    depends_on:
+      - postgres
+
+  zssn-api:
+    build:
+      context: ./zssn-api
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - RAILS_ENV=docker
+    networks:
+      zssn_network:
+        aliases:
+          - zssn-api
+    links:
+      - postgres
+    ports:
+      - 3000:3000
+
+  zssn-web:
+    build:
+      context: ./zssn-web
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      zssn_network:
+        aliases:
+          - zssn-web
+    links:
+      - zssn-api
+    ports:
+      - 80:80
+
+networks:
+  zssn_network:

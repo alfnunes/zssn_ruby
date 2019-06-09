@@ -1,17 +1,20 @@
 # zssn_ruby
 ZSSN (Zombie Survival Social Network)
 
-## SoluÁ„o
-Desenvolvido no formato de ***REST API*** utilizando os padrıes de micro serviÁos no qual contÈm
+## Solu√ß√£o
+Desenvolvido no formato de ***REST API*** utilizando os padr√µes de micro servi√ßos no qual cont√©m
 
 Banco de Dados: Postgres
+
 Interface com Banco de Dados: Pgadmin
+
 API: Ruby on Rails
+
 Front: React
 
 ## Como Rodar
 1-) Instalar o docker em qualquer plataforma OS
-2-) Ao clonar o projeto entrar na rais do zssn_ruby onde contÈm o arquivo docker-compose
+2-) Ao clonar o projeto entrar na rais do zssn_ruby onde cont√©m o arquivo docker-compose
 3-) Executar ```
 docker-compose build
 ```
@@ -27,7 +30,7 @@ API: http://localhost:3000
 Web: http://localhost
 
 
-## DocumentaÁ„o da API
+## Documenta√ß√£o da API
 http://localhost:3000/api-docs/index.html
 
 #Mais

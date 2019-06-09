@@ -34,7 +34,7 @@ Web: http://localhost
 ## Documentação da API
 http://localhost:3000/api-docs/index.html
 
-#Mais
+## Adicionais
 
 Adicionei a collection do postman com as requests criadas.
 

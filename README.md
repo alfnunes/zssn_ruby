@@ -14,15 +14,16 @@ Front: React
 
 ## Como Rodar
 1-) Instalar o docker em qualquer plataforma OS
+
 2-) Ao clonar o projeto entrar na rais do zssn_ruby onde contém o arquivo docker-compose
-3-) Executar ```
-docker-compose build
-```
-4-) Executar ```
-docker-compose up```
+
+3-) Executar ```docker-compose build```
+
+4-) Executar ```docker-compose up```
 
 ## Criando Banco de Dados
 1-) Executar ``` docker-compose exec zssn-api rake db:migrate```
+
 2-) Para pouplar Executar ``` docker-compose exec zssn-api rake db:seed```
 
 ## URL's 
